@@ -17,7 +17,7 @@ describe 'User visits homepage' do
     Warehouse.create!(name: 'Maceio', code:'MCZ', city: 'Maceio', area: 50000)
 
     # Act
-    visit('/')
+    visit(root_path)
 
     # Assert
     expect(page).not_to have_content('Não existem galpões cadastrados')
@@ -35,7 +35,7 @@ describe 'User visits homepage' do
     # Arrange
 
     # Act
-    visit('/')
+    visit(root_path)
 
     # Assert
     expect(page).to have_content("Não existem galpões cadastrados")
